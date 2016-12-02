@@ -15,13 +15,15 @@
 <p><span id="temp"></span></p>
 <p><span id="condition"></span></p>
         <script>
+
+        // We used OpenWeatherAPI to get weather Information
 var weather = new XMLHttpRequest();
 weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=boston,ma&APPID=de49f2c0ca814cc766a7080d028d5a92", false);
 
 weather.send(null);
 var r = JSON.parse(weather.response);
-var condition = r.weather[0].main;
-var temp1 = r.main.temp;
+var condition = r.weather[0].main; // Extract weather condition e.g. Rain, Clouds, ...etc
+var temp1 = r.main.temp;  // Extract weather temperature 
 
 var temp = parseInt(temp1)-273.15;
 
@@ -37,23 +39,6 @@ document.getElementById("temp").innerHTML = temp;
         // connect the client
         client.connect({onSuccess:onConnect});
         
-       
-if ( temp<10) {
-if (condition="Rain") {
-backpack.writeBitmap(y_cold);
-}
-else {
-    backpack.writeBitmap(y_hot);
-}
-}
-
-if (temp>10){
-   if (condition=!"Rain") {
-backpack.writeBitmap(n_cold);
-}
-else {
-    backpack.writeBitmap(n_hot); 
-}}
         // called when the client connects
         function onConnect() {
           client.subscribe("backpackBitmap");
@@ -77,12 +62,13 @@ else {
         }
 
         function sendImage(){
-
             var string = JSON.stringify({name:"hangee",data:pixels});
 
             console.log(string);
             sendMessage(string);
         }
+
+        var pixels = new Array();
 
 var y_cold = [
     [1,1,1,0,0,1,1,1],
@@ -127,6 +113,30 @@ var y_hot = [
     [0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0],
   ];
+
+
+if ( temp<10) {
+if (condition=="Rain") {
+  pixels = y_cold;
+  sendImage();
+}
+else {
+   pixels =  y_hot;
+   sendImage();
+}
+}
+
+if (temp>10){
+   if (condition!="Rain") {
+  pixels = n_cold;
+  sendImage();
+}
+else {
+   pixels =  n_hot;
+   sendImage();
+}}
+
+
         </script>
     </body>
 </html>
