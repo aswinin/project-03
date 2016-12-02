@@ -42,6 +42,27 @@ document.getElementById("temp").innerHTML = temp;
         // called when the client connects
         function onConnect() {
           client.subscribe("backpackBitmap");
+
+if ( temp<10) {
+if (condition=="Rain") {
+  pixels = y_cold;
+  sendImage();
+}
+else {
+   pixels =  y_hot;
+   sendImage();
+}
+}
+
+if (temp>10){
+   if (condition!="Rain") {
+  pixels = n_cold;
+  sendImage();
+}
+else {
+   pixels =  n_hot;
+   sendImage();
+}}
         }
         
         // called when the client loses its connection
@@ -115,26 +136,6 @@ var y_hot = [
   ];
 
 
-if ( temp<10) {
-if (condition=="Rain") {
-  pixels = y_cold;
-  sendImage();
-}
-else {
-   pixels =  y_hot;
-   sendImage();
-}
-}
-
-if (temp>10){
-   if (condition!="Rain") {
-  pixels = n_cold;
-  sendImage();
-}
-else {
-   pixels =  n_hot;
-   sendImage();
-}}
 
 
         </script>
