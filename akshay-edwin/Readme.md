@@ -19,4 +19,4 @@ Consider a CNC machine which breaks down if the temperature increases over 300F.
 # Running the project
 1. Follow the instructions [here](https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=1741&tag=1750&journey=Setup%20Raspberry%20Pi%20for%20Predix&resources=1785,1741,1742,1743) and install the Predix Machine code on Raspberri Pi
 2. Download the source code PredixMachineDashboard-ES and run in Node server. 
-3. Follow the steps in the predix-status folder to deploy the app in Alexa test environment.  
+3. For running the Alexa app follow the steps [here](https://github.com/akshaybagai/project-03/tree/master/akshay-edwin/source-code/predix-status) 
