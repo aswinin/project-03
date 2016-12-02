@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tessel Matrix</title>
+        <script src="mqttws31-min.js"></script>
+        <script src = 'https://code.jquery.com/jquery-1.10.1.min.js'></script>
+        <script src = 'https://code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
+        <script src = 'https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+        <link href = 'https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css' rel='stylesheet'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <style>.center { text-align: center; margin-left: auto; margin-right: auto; margin-bottom: auto; margin-top: auto; }</style>
+    </head>
+    <body> 
+        <div id="weather"></div>
+<p><span id="temp"></span></p>
+<p><span id="condition"></span></p>
+        <script>
+var weather = new XMLHttpRequest();
+weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=boston,ma&APPID=de49f2c0ca814cc766a7080d028d5a92", false);
+
+weather.send(null);
+var r = JSON.parse(weather.response);
+var condition = r.weather[0].main;
+var temp1 = r.main.temp;
+
+var temp = parseInt(temp1)-273.15;
+
+document.getElementById("condition").innerHTML = condition;
+document.getElementById("temp").innerHTML = temp;
+
+        client = new Paho.MQTT.Client('162.243.219.88', 9001, "hange");
+
+        // set callback handlers
+        client.onConnectionLost = onConnectionLost;
+        client.onMessageArrived = onMessageArrived;
+        
+        // connect the client
+        client.connect({onSuccess:onConnect});
+        
+       
+if ( temp<10) {
+if (condition="Rain") {
+backpack.writeBitmap(y_cold);
+}
+else {
+    backpack.writeBitmap(y_hot);
+}
+}
+
+if (temp>10){
+   if (condition=!"Rain") {
+backpack.writeBitmap(n_cold);
+}
+else {
+    backpack.writeBitmap(n_hot); 
+}}
+        // called when the client connects
+        function onConnect() {
+          client.subscribe("backpackBitmap");
+        }
+        
+        // called when the client loses its connection
+        function onConnectionLost(responseObject) {
+          if (responseObject.errorCode !== 0) {
+            console.log("onConnectionLost:"+responseObject.errorMessage);
+          }
+        }
+
+        function sendMessage(message) {
+            pahoMessage = new Paho.MQTT.Message(message);
+            pahoMessage.destinationName = "backpackBitmap";
+            client.send(pahoMessage);
+        }
+
+        function onMessageArrived(message) {
+            console.log("onMessageArrived:"+message.payloadString);
+        }
+
+        function sendImage(){
+
+            var string = JSON.stringify({name:"hangee",data:pixels});
+
+            console.log(string);
+            sendMessage(string);
+        }
+
+var y_cold = [
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1],
+  ];
+
+var n_cold = [
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1],
+  ];
+
+var y_hot = [
+    [1,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+     [1,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+  ];
+
+  var n_hot = [
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+  ];
+        </script>
+    </body>
+</html>
+
+
+
+
