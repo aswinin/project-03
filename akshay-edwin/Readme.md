@@ -13,6 +13,9 @@ Consider a CNC machine which breaks down if the temperature increases over 300F.
 | Predix App | Source code for the web application deployed at the link |
 | Alexa Predix Status | Source Code for alexa app to check the status of the Predix App|
 
+# Architecture
+[Described in video here](https://youtu.be/bUb6SnCS6ck)
+
 # Live application 
 (https://predix-machine-mit.run.aws-usw02-pr.ice.predix.io)
 
