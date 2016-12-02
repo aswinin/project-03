@@ -1,0 +1,1 @@
+Predix config: https://www.predix.io/resources/tutorials/tutorial-details.html?tutorial_id=1741&tag=1750&journey=Setup%20Raspberry%20Pi%20for%20Predix&resources=1785,1741,1742,1743

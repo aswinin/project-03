@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Echoing properties from /Users/george/Projects/predix-machine-template-adapter-edison/predix-scripts/bash/log/predix-services-summary.txt
+Authors SDLP v1 2015
+------------------------------------------------------------
+What did we do:
+
+Predix Services Configuration
+--------------------------------------------------
+
+Installed UAA with a client_id/secret (for your app) and a user/password (for your users to log in to your app)
+Installed Time Series and added time series scopes as client_id authorities
+Installed Asset and added asset scopes as client_id authorities
+
+UAA URL: https://ed69f4be-91b3-4d2f-a3ad-c0bf3eab6ff4.predix-uaa.run.aws-usw02-pr.ice.predix.io
+UAA Admin Client ID: admin
+UAA Admin Client Secret: secret
+UAA Generic Client ID: app_client_id
+UAA Generic Client Secret: secret
+UAA User ID: app_user_1
+UAA User PASSWORD: app_user_1
+TimeSeries Ingest URL:  wss://gateway-predix-data-services.run.aws-usw02-pr.ice.predix.io/v1/stream/messages
+TimeSeries Query URL:  https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/datapoints
+TimeSeries ZoneID: fde1aca0-76ee-4302-81b9-f21567f4eb61
+Asset URL:  https://predix-asset.run.aws-usw02-pr.ice.predix.io
+Asset Zone ID: fe94e5fc-6528-44a2-ab32-1ff86e8ccaca
+
+Basic Predix App
+--------------------------------------------------
+Installed a simple front-end named edison-gxg-nodejs-starter and updated the property files and manifest.yml with UAA, Time Series and Asset info
+
+Front-end App URL: https://edison-gxg-nodejs-starter.run.aws-usw02-pr.ice.predix.io
+
+You can execute 'cf env edison-gxg-nodejs-starter' to view info about your front-end app, UAA, Asset, and Time Series
+In your web browser, navigate to your front-end application endpoint
+
+Edge Device Specific Configuration
+--------------------------------------------------
+
+Created Predix Machine container and updated the property files with UAA and Time Series info
