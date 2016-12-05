@@ -1,0 +1,10 @@
+The idea behind Mirror on the Wall (MotW) is to capture the user's emotional status after returning home everyday. 
+
+Essentially, the user will walk in the door of their house and trigger the ambient sensor on the Tessel to snap an image of their face. This image will be passed along to the Microsoft Cognitive API and analyzed. With the return data, the tessel will log the data to onboard storage. 
+
+//not implemented
+There will be a Google Chart that is constantly updated with this data, so a historical trend can be viewed.
+
+As a bonus feature, we will use the LED screen to reflect the dominant emotion back to the user when they initially walk in. We will display this for a period of 10 seconds or so.
+
+There are some interesting use cases, for instance having the ability to track the emotion of a child when they return home from school. 

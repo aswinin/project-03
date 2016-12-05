@@ -1,0 +1,17 @@
+Competitive Analysis - 
+
+Wireless Sensors Detect People Emotions 
+(http://www.popsci.com/wireless-sensors-can-detect-peoples-emotions)
+Analyze reflections in wireless signals for heart rate and breathing rate.
+
+Wrist Band Emotion Detector 
+(https://www.technologyreview.com/s/421316/sensor-detects-emotions-through-the-skin/)
+Measures electrical changes in the skin to keep track of stress. This is an 'always-on' assessment, however it is primarily an indicator of stress and does not provide measurement of other emotions.
+
+Affectiva 
+(http://www.verizonwireless.com/news/article/2015/08/emotion-recognition-technology-can-read-your-feelings-through-your-face.html)
+Measures facial cues through any camera. They seem to pride themselves on algorithm, unclear how it stacks up against Microsoft Cognitive APIs. We are using the same idea of measuring facial cues through a camera, however ours is at a fixed place and captures the emotion upon returning home.
+
+Mood Ring 
+(https://en.wikipedia.org/wiki/Mood_ring)
+Changes color based on temperature of the wearer. Potentially may indicate the mood of someone. ;-)

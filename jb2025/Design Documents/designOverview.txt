@@ -1,0 +1,21 @@
+designOverview
+
+The issue we are attempting to solve with this project is one of self-reflection - how do you feel?
+
+By using a webcam and an emotional analysis software package, we can document and store the emotions of those who interactv with the device.
+
+Intended Design 
+The designed user interface was simple - clap your hands, and the webcam takes an image and sends it for processing.
+
+This data is then stored locally and available for the user to access via the thumb drive located on the tessel.
+
+Actual Design
+Due to time limitations and issues processing data with the Microsoft Cognitive API, we have switched to a modular system.
+
+We run clapImage.js on the tessel to initialize the camera and tell the Tessel to wait for a loud noise in order to capture an image. These images are stored on the flash drive inserted into the USB slot.
+
+After you’ve collected the data, you stop the clapImage program on the Tessel and initiate the cameraServer.js
+
+Pull the IP printed out on the console, and add it to the cogAPI.js in the appropriate section and run it locally on your PC in order to analyze all of the data and generate the JSON file.
+
+Once you have the JSON file, you can use whatever software you’d like to generate charts and analyze the data over time!
