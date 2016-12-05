@@ -8,7 +8,7 @@ Creative Webcam
 https://amazon.com/Creative-Live-Sync-720P-Webcam/dp/B0092QJRPC/ref=sr_1_1
 
 Microsoft Cognitive API
-https://https://www.microsoft.com/cognitive-services/en-us/emotion-api
+https://www.microsoft.com/cognitive-services/en-us/emotion-api
 
 Tessel 2
 https://tessel.io/
