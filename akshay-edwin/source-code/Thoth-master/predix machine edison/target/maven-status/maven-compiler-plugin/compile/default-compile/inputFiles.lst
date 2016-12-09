@@ -1,0 +1,6 @@
+/Users/george/Projects/predix-machine-template-adapter-edison/src/main/java/com/ge/predix/solsvc/workshop/config/JsonDataNode.java
+/Users/george/Projects/predix-machine-template-adapter-edison/src/main/java/com/ge/predix/solsvc/workshop/types/WorkshopDataNodeIntel.java
+/Users/george/Projects/predix-machine-template-adapter-edison/src/main/java/com/ge/predix/solsvc/workshop/types/WorkshopDataSubscription.java
+/Users/george/Projects/predix-machine-template-adapter-edison/src/main/java/com/ge/predix/solsvc/workshop/types/WorkshopSubscriptionListener.java
+/Users/george/Projects/predix-machine-template-adapter-edison/src/main/java/com/ge/predix/solsvc/workshop/processor/SampleProcessor.java
+/Users/george/Projects/predix-machine-template-adapter-edison/src/main/java/com/ge/predix/solsvc/workshop/adapter/IntelBoardSubscriptionMachineAdapter.java

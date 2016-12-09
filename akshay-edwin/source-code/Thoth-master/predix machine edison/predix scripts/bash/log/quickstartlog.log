@@ -1,0 +1,65 @@
+2016-11-09 20:49:30:  ---  Using Global Appender : edison-gxg
+2016-11-09 20:49:30:  ---  Global variables available for use
+2016-11-09 20:49:30:  ---  INSTANCE_PREPENDER
+2016-11-09 20:49:30:  ---  USE_TRAINING_UAA
+2016-11-09 20:49:30:  ---  RUN_DELETE_SERVICES
+2016-11-09 20:49:30:  ---  RUN_CREATE_SERVICES
+2016-11-09 20:49:30:  ---  RUN_MACHINE_CONFIG
+2016-11-09 20:49:30:  ---  RUN_COMPILE_REPO
+2016-11-09 20:49:30:  ---  RUN_MACHINE_TRANSFER
+2016-11-09 20:49:30:  ---  RUN_DEPLOY_FRONTEND
+2016-11-09 20:49:30:  ---  FRONTENDAPP_BRANCH
+2016-11-09 20:49:30:  ---  QUIET_MODE
+2016-11-09 20:49:30:  ---  
+2016-11-09 20:49:30:  ---  #
+2016-11-09 20:49:30:  ---  Welcome to the Predix quick start script!
+2016-11-09 20:49:31:  ---  Using Global Appender : edison-gxg
+2016-11-09 20:49:31:  ---  Creating Predix Services
+2016-11-09 20:49:32:  ---  Pushing "edison-gxg-hello-world" to initially create Predix Microservices...
+2016-11-09 20:50:13:  ---  App "edison-gxg-hello-world" successfully pushed to CloudFoundry!
+2016-11-09 20:50:21:  ---  trustedIssuerID copied from environmental variables!
+2016-11-09 20:50:23:  ---  UAA URL copied from environmental variables!
+2016-11-09 20:50:32:  ---  TIMESERIES_ZONE_HEADER_NAME copied from environmental variables!
+2016-11-09 20:50:34:  ---  TIMESERIES_ZONE_ID copied from environmental variables!
+2016-11-09 20:50:37:  ---  TIMESERIES_INGEST_URI copied from environmental variables!
+2016-11-09 20:50:40:  ---  TIMESERIES_QUERY_URI copied from environmental variables!
+2016-11-09 20:50:48:  ---  ASSET_ZONE_ID copied from environment variables!
+2016-11-09 20:50:48:  ---  Registering Client on UAA to access the Predix Services
+2016-11-09 20:50:48:  ---  Making CURL GET request to get UAA Admin Token...
+2016-11-09 20:50:54:  ---  Got UAA admin token
+2016-11-09 20:50:54:  ---  Making CURL GET request to create UAA Client ID "app_client_id"...
+2016-11-09 20:50:55:  ---  Successfully re-using existing Client ID: "app_client_id"
+2016-11-09 20:50:55:  ---  Creating User on UAA to login to the application
+2016-11-09 20:50:55:  ---  Making CURL GET request to get UAA Admin Token...
+2016-11-09 20:50:57:  ---  Got UAA admin token
+2016-11-09 20:50:57:  ---  Making CURL GET request to create UAA user "app_user_1"...
+2016-11-09 20:50:58:  ---  Successfully re-using existing UAA User: "app_user_1"
+2016-11-09 20:51:01:  ---  Asset URI copied from environment variables! https://predix-asset.run.aws-usw02-pr.ice.predix.io
+2016-11-09 20:51:01:  ---  Creating Asset with tags
+2016-11-09 20:51:02:  ---  Got UAA Client Token for app_client_id
+2016-11-09 20:51:04:  ---  Predix Services Configurations found in file: "/Users/george/Projects/predix-machine-template-adapter-edison/predix-scripts/bash/log/predix-services-summary.txt"
+2016-11-09 20:51:04:  ---  Created Predix Services!
+2016-11-09 20:51:04:  ---  Build & Deploy Front-end Application
+2016-11-09 20:51:07:  ---  trustedIssuerID copied from VCAP environmental variables!
+2016-11-09 20:51:09:  ---  UAA URL copied from VCAP environmental variables!
+2016-11-09 20:51:11:  ---   TIMESERIES_INGEST_URI copied from VCAP environmental variables!
+2016-11-09 20:51:13:  ---  TIMESERIES_QUERY_URI copied from VCAP environmental variables!
+2016-11-09 20:51:15:  ---  TIMESERIES_ZONE_ID copied from VCAP environmental variables!
+2016-11-09 20:51:17:  ---  ASSET_ZONE_ID copied from VCAP environment variables!
+2016-11-09 20:51:19:  ---  assetURI copied from VCAP environment variables!
+2016-11-09 20:51:22:  ---  Successfully cloned "/Users/george/Projects/predix-machine-template-adapter-edison/predix-scripts/bash/scripts/../predix-nodejs-starter" and checkout the branch "master"
+2016-11-09 20:51:22:  ---  Deploying the application "edison-gxg-nodejs-starter"
+2016-11-09 20:52:18:  ---  Successfully deployed!
+2016-11-09 20:52:20:  ---  edison-gxg-nodejs-starter started!
+2016-11-09 20:52:20:  ---  Creating Predix Machine Container
+2016-11-09 20:52:20:  ---  Reading Predix Machine configuration from VCAP properties
+2016-11-09 20:52:22:  ---  trustedIssuerID copied from environmental variables!
+2016-11-09 20:52:24:  ---  UAA URL copied from environmental variables!
+2016-11-09 20:52:27:  ---  TIMESERIES_INGEST_URI copied from environmental variables!
+2016-11-09 20:52:29:  ---  TIMESERIES_ZONE_ID copied from environmental variables!
+2016-11-09 20:52:52:  ---  Created Predix Machine container!
+2016-11-09 20:53:13:  ---  Welcome to the Predix quick start script!
+2016-11-09 20:53:13:  ---  Using Global Appender : edison-gxg
+2016-11-09 20:53:13:  ---  Transferring Predix Machine Container
+2016-11-09 20:53:13:  ---  Archiving the configured Predix Machine...
+2016-11-09 20:53:15:  ---  Archived the configured Predix Machine and stored in PredixMachineContainer.tar.gz

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1478717592574
+Build-Jdk: 1.8.0_101
+Built-By: george
+Bundle-Classpath: .,mraa.jar,upm_grove.jar,upm_buzzer.jar
+Bundle-ManifestVersion: 2
+Bundle-Name: Predix Machine Subscription Machine Adapter
+Bundle-SymbolicName: com.ge.predix.solsvc.predix-machine-template-adapte
+ r-edison
+Bundle-Version: 1.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: aQute.bnd.annotation.metatype;version="[1.45,2)",org.slf
+ 4j;version="[1.7,2)";provider=paxlogging,org.osgi.service.component;ver
+ sion="[1.2,2)",org.osgi.framework;version="[1.7,2)",org.codehaus.jackso
+ n.map;version="[1.9,2)",org.codehaus.jackson.type;version="[1.9,2)",com
+ .ge.dspmicro.hoover.api.spillway;version="[1.1,2.0)",com.ge.dspmicro.ho
+ over.api.processor;version="[1.1,2.0)",com.ge.dspmicro.machinegateway.a
+ pi.adapter;version="[1.3,2.0)",com.ge.dspmicro.machinegateway.types;ver
+ sion="[1.3,2.0)",org.osgi.service.cm;version="[1.5,2)",com.ge.dspmicro.
+ machinegateway.api;version="[1.3,2.0)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.ge.predix.solsvc.workshop.adapter.xml,OS
+ GI-INF/com.ge.predix.solsvc.workshop.processor.xml
+Tool: Bnd-3.2.0.201605172007

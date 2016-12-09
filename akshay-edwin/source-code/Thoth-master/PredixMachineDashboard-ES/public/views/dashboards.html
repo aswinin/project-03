@@ -1,0 +1,43 @@
+<px-card header-text="Light sensors" icon="fa-line-chart">
+  <!--<px-datetime-range-field range='{"from":"2016-07-01T01:00:00.000Z","to":"2016-07-08T14git :00:00.000Z"}' date-format="YYYY/MM/DD" time-format="hh:mm:ss A" show-buttons="true" block-future-dates="true" show-time-zone="text" time-zone="UTC" is-valid="true" px-datetime-range-submitted="rangeSubmited()"></px-datetime-range-field>
+
+<px-deck-selector ng-model="searchInput" ng-change="deckEvent()" decks='[{"name":"First Deck","url":"/deck1"},{"name":"Second Deck","url":"/deck2"},{"name":"Third Deck","url":"/deck3"}]'></px-deck-selector>
+-->
+<div id="select"><b>Select start time</b></p>
+      <select id='start-time' class='start-time' ng-model="startTime" ng-change="changeStart();">
+        <option value="5mi-ago">5mi-ago</option>
+        <option value="15mi-ago">15mi-ago</option>
+        <option value="30mi-ago">30mi-ago</option>
+        <option value="45mi-ago">45mi-ago</option>
+        <option value="45mi-ago">45mi-ago</option>
+        <option value="1h-ago" selected='selected'>1h-ago</option>
+        <option value="5h-ago">5h-ago</option>
+        <option value="10h-ago">10h-ago</option>
+        <option value="1d-ago">1d-ago</option>
+        <option value="5d-ago">5d-ago</option>
+        <option value="10d-ago">10d-ago</option>
+        <option value="1w-ago">1w-ago</option>
+        <option value="2w-ago">2w-ago</option>
+        <option value="3w-ago">3w-ago</option>
+        <option value="1mm-ago">1mm-ago</option>
+        <option value="2mm-ago">2mm-ago</option>
+        <option value="3mm-ago">3mm-ago</option>
+        <option value="5mm-ago">5mm-ago</option>
+        <option value="6mm-ago">6mm-ago</option>
+        <option value="8mm-ago">8mm-ago</option>
+        <option value="1y-ago">1y-ago</option>
+      </select>
+    </div>
+      <px-vis-timeseries height="300" width="800" prevent-resize="true" selection-type="xy" enable-tooltip="true" register-location="top" chart-data='[{{tsReturnLight}}]' include-all-series="true"></px-vis-timeseries>
+</px-card>
+<px-card header-text="Temperature sensors" icon="fa-line-chart">
+<px-vis-timeseries height="300" width="800" prevent-resize="true" selection-type="xy" enable-tooltip="true" register-location="top" chart-data='[{{tsReturnTemp}}]' include-all-series="true"></px-vis-timeseries>
+</px-card>
+<px-twoup id="widget-2" widget-header="RotaryAngle and Buttons" widget-icon="fa-pied-piper">
+  <div class='widget-1'>
+    <px-vis-timeseries height="200" width="350" prevent-resize="true" selection-type="xy" enable-tooltip="true" register-location="top" chart-data='[{{tsReturnRotary}}]' include-all-series="true"></px-vis-timeseries>
+  </div>
+  <div class='widget-2'>
+    <px-vis-timeseries height="200" width="350" prevent-resize="true" selection-type="xy" enable-tooltip="true" register-location="top" chart-data='[{{tsReturnButton}}]' include-all-series="true"></px-vis-timeseries>
+  </div>
+</px-twoup>
