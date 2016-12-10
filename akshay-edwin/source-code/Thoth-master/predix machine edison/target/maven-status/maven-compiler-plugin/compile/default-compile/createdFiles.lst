@@ -1,0 +1,8 @@
+com/ge/predix/solsvc/workshop/adapter/IntelBoardSubscriptionMachineAdapter$1.class
+com/ge/predix/solsvc/workshop/types/WorkshopDataSubscription.class
+com/ge/predix/solsvc/workshop/config/JsonDataNode.class
+com/ge/predix/solsvc/workshop/processor/SampleProcessor.class
+com/ge/predix/solsvc/workshop/types/WorkshopSubscriptionListener.class
+com/ge/predix/solsvc/workshop/adapter/IntelBoardSubscriptionMachineAdapter$Config.class
+com/ge/predix/solsvc/workshop/types/WorkshopDataNodeIntel.class
+com/ge/predix/solsvc/workshop/adapter/IntelBoardSubscriptionMachineAdapter.class

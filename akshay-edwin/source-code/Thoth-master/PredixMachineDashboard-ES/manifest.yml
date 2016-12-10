@@ -1,0 +1,25 @@
+---
+applications:
+  - name: predix-machine-mit
+    buildpack: predix_openresty_buildpack
+    path: dist
+    memory: 64M
+    stack: cflinuxfs2
+    services:
+            - es_redis # change this to your redis service instance name
+            - es_view # change this to your view service instance name
+            #- edison-gxg-asset
+            #- edison-gxg-time-series
+            #- edison-gxg-uaa
+    env:
+      REDIS: redis-3
+      #UAA_SERVER_URL: https://802c21b4-8196-4750-a164-a2511d70f035.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      #clientId: gxg-oauth2
+      #uaa_authorization_header: Z3hnLW9hdXRoMjpVUFJPYnlHRUd1dUZYTElvaytFSmlxK0F5djBxd0F5K1cwMXQwMU04Uk44PQ==
+      #Shared UAA
+      UAA_SERVER_URL: https://f5eba58e-4799-450a-8b7e-3dc5897a30d8.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      clientId: app_client_id
+      uaa_authorization_header: YXBwX2NsaWVudF9pZDpzZWNyZXQ=
+      assetMachine: asset
+      timeSeriesZoneId: 92f8b9c6-153c-47e0-9cf8-530c9d661c48
+      timeSeriesUrl: https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io

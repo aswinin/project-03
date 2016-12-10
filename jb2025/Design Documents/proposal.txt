@@ -1,0 +1,25 @@
+Justin Burke Proposal
+
+Issue: What mood do people think you're in?
+
+Solution: Using Microsoft Cognitive APIs, a Tessel 2 and Camera, I plan to build a box that reflects your mood back to yourself. 
+
+Team Name: Mirror on the Wall
+
+Team Members: Justin Burke
+
+Current Resources:
+
+Package to run the Creative Web Cam, Tessel-AV
+https://www.npmjs.com/package/tessel-av
+
+Microsoft Cognitive API
+https://www.microsoft.com/cognitive-services/en-us/emotion-api
+
+NPM / NodeJS
+
+Tessel 2
+
+Tessel 2 Ambient Sensor
+
+Tessel 2 LED Display

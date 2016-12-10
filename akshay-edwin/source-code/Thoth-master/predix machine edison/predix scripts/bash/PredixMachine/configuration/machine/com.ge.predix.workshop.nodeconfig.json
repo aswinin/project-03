@@ -1,0 +1,22 @@
+[
+   {  
+     "nodeName": "Temperature:EDISON-GXG",  
+     "nodeType": "Temperature",  
+     "nodePin": 0
+   },
+   {
+     "nodeName": "Light:EDISON-GXG",  
+     "nodeType": "Light",
+     "nodePin": 1
+   },
+   {  
+      "nodeName": "RotaryAngle:EDISON-GXG",  
+      "nodeType": "RotaryAngle",  
+      "nodePin": 2
+   },
+   {  
+      "nodeName": "Button:EDISON-GXG",  
+      "nodeType": "Button",  
+      "nodePin": 2
+   }
+]
